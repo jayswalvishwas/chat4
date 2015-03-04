@@ -294,7 +294,8 @@ public class SmackCcsClient {
 		config.setDebuggerEnabled(false);
 
 		// -Dsmack.debugEnabled=true
-		XMPPConnection.DEBUG_ENABLED = true;
+		//XMPPConnection.DEBUG_ENABLED = true;
+		XMPPConnection.DEBUG_ENABLED = false;
 
 		connection = new XMPPConnection(config);
 		connection.connect();
@@ -399,7 +400,7 @@ public class SmackCcsClient {
 		String messageId = ccsClient.getRandomMessageId();
 		Map<String, String> payload = new HashMap<String, String>();
 		//payload.put(MESSAGE_KEY, message);
-		payload.put(MESSAGE_KEY, "hello");
+		payload.put(MESSAGE_KEY, message);
 		payload.put("EmbeddedMessageId", messageId);
 		String collapseKey = "message with payload";
 		Long timeToLive = 10000L;

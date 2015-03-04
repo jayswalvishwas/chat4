@@ -10,10 +10,7 @@
 <project name="chat4" default="default" basedir=".">
     <description>Builds, tests, and runs the project chat4.</description>
     <import file="nbproject/build-impl.xml"/>
-    <target name="-post-dist">
-       <echo message="Copy .war file to my custom folder"/>
-       <copy file="${dist.war}" todir="${war.custom.dir}" />
-   </target>
+   
 	<!--
 
     There exist several targets which are by default empty and which can be 
